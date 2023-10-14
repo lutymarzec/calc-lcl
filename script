@@ -1,0 +1,512 @@
+const prices = {
+  1: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "578",
+        "Door-to-Door Charge": "1950",
+        "Overall Charge (RMB)": "2528",
+        "Overall Charge (NZD)": "585"
+      },
+      Wellington: {
+        "Price Range": "578",
+        "Door-to-Door Charge": "3400",
+        "Overall Charge (RMB)": "3978",
+        "Overall Charge (NZD)": "927"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "261",
+        "Door-to-Door Charge": "1950",
+        "Overall Charge (RMB)": "2211",
+        "Overall Charge (NZD)": "511"
+      },
+      Wellington: {
+        "Price Range": "261",
+        "Door-to-Door Charge": "3400",
+        "Overall Charge (RMB)": "3661",
+        "Overall Charge (NZD)": "853"
+      }
+    }
+  },
+
+  2: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "1048",
+        "Door-to-Door Charge": "2850",
+        "Overall Charge (RMB)": "3898",
+        "Overall Charge (NZD)": "901"
+      },
+      Wellington: {
+        "Price Range": "1048",
+        "Door-to-Door Charge": "5250",
+        "Overall Charge (RMB)": "6298",
+        "Overall Charge (NZD)": "1468"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "477",
+        "Door-to-Door Charge": "2850",
+        "Overall Charge (RMB)": "3327",
+        "Overall Charge (NZD)": "769"
+      },
+      Wellington: {
+        "Price Range": "477",
+        "Door-to-Door Charge": "5250",
+        "Overall Charge (RMB)": "5727",
+        "Overall Charge (NZD)": "1335"
+      }
+    }
+  },
+
+  3: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "1267",
+        "Door-to-Door Charge": "3750",
+        "Overall Charge (RMB)": "5017",
+        "Overall Charge (NZD)": "1160"
+      },
+      Wellington: {
+        "Price Range": "1267",
+        "Door-to-Door Charge": "7100",
+        "Overall Charge (RMB)": "8367",
+        "Overall Charge (NZD)": "1950"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "711",
+        "Door-to-Door Charge": "3750",
+        "Overall Charge (RMB)": "4461",
+        "Overall Charge (NZD)": "1032"
+      },
+      Wellington: {
+        "Price Range": "711",
+        "Door-to-Door Charge": "7100",
+        "Overall Charge (RMB)": "7811",
+        "Overall Charge (NZD)": "1821"
+      }
+    }
+  },
+
+  4: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "1688",
+        "Door-to-Door Charge": "4650",
+        "Overall Charge (RMB)": "6338",
+        "Overall Charge (NZD)": "1466"
+      },
+      Wellington: {
+        "Price Range": "1688",
+        "Door-to-Door Charge": "9150",
+        "Overall Charge (RMB)": "10838",
+        "Overall Charge (NZD)": "2526"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "877",
+        "Door-to-Door Charge": "4650",
+        "Overall Charge (RMB)": "5527",
+        "Overall Charge (NZD)": "1278"
+      },
+      Wellington: {
+        "Price Range": "877",
+        "Door-to-Door Charge": "9150",
+        "Overall Charge (RMB)": "10027",
+        "Overall Charge (NZD)": "2337"
+      }
+    }
+  },
+
+  5: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "2108",
+        "Door-to-Door Charge": "5550",
+        "Overall Charge (RMB)": "7658",
+        "Overall Charge (NZD)": "1771"
+      },
+      Wellington: {
+        "Price Range": "2108",
+        "Door-to-Door Charge": "11200",
+        "Overall Charge (RMB)": "13308",
+        "Overall Charge (NZD)": "3102"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1095",
+        "Door-to-Door Charge": "5550",
+        "Overall Charge (RMB)": "6645",
+        "Overall Charge (NZD)": "1537"
+      },
+      Wellington: {
+        "Price Range": "1095",
+        "Door-to-Door Charge": "11200",
+        "Overall Charge (RMB)": "12295",
+        "Overall Charge (NZD)": "2866"
+      }
+    }
+  },
+
+  6: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "2527",
+        "Door-to-Door Charge": "6450",
+        "Overall Charge (RMB)": "8977",
+        "Overall Charge (NZD)": "2076"
+      },
+      Wellington: {
+        "Price Range": "2527",
+        "Door-to-Door Charge": "13250",
+        "Overall Charge (RMB)": "15777",
+        "Overall Charge (NZD)": "3678"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1311",
+        "Door-to-Door Charge": "6450",
+        "Overall Charge (RMB)": "7761",
+        "Overall Charge (NZD)": "1795"
+      },
+      Wellington: {
+        "Price Range": "1311",
+        "Door-to-Door Charge": "13250",
+        "Overall Charge (RMB)": "14561",
+        "Overall Charge (NZD)": "3394"
+      }
+    }
+  },
+
+  7: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "2948",
+        "Door-to-Door Charge": "7350",
+        "Overall Charge (RMB)": "10298",
+        "Overall Charge (NZD)": "2382"
+      },
+      Wellington: {
+        "Price Range": "2948",
+        "Door-to-Door Charge": "15300",
+        "Overall Charge (RMB)": "18248",
+        "Overall Charge (NZD)": "4254"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1311",
+        "Door-to-Door Charge": "7350",
+        "Overall Charge (RMB)": "8661",
+        "Overall Charge (NZD)": "2003"
+      },
+      Wellington: {
+        "Price Range": "1311",
+        "Door-to-Door Charge": "15300",
+        "Overall Charge (RMB)": "16611",
+        "Overall Charge (NZD)": "3872"
+      }
+    }
+  },
+
+  8: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "3368",
+        "Door-to-Door Charge": "8250",
+        "Overall Charge (RMB)": "11618",
+        "Overall Charge (NZD)": "2687"
+      },
+      Wellington: {
+        "Price Range": "3368",
+        "Door-to-Door Charge": "17350",
+        "Overall Charge (RMB)": "20718",
+        "Overall Charge (NZD)": "4829"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "8250",
+        "Overall Charge (RMB)": "9850",
+        "Overall Charge (NZD)": "2278"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "17350",
+        "Overall Charge (RMB)": "18950",
+        "Overall Charge (NZD)": "4417"
+      }
+    }
+  },
+
+  9: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "3788",
+        "Door-to-Door Charge": "9150",
+        "Overall Charge (RMB)": "12938",
+        "Overall Charge (NZD)": "2992"
+      },
+      Wellington: {
+        "Price Range": "3788",
+        "Door-to-Door Charge": "19400",
+        "Overall Charge (RMB)": "23188",
+        "Overall Charge (NZD)": "5405"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "9150",
+        "Overall Charge (RMB)": "10750",
+        "Overall Charge (NZD)": "2486"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "19400",
+        "Overall Charge (RMB)": "21000",
+        "Overall Charge (NZD)": "4895"
+      }
+    }
+  },
+
+  10: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "4208",
+        "Door-to-Door Charge": "10050",
+        "Overall Charge (RMB)": "14258",
+        "Overall Charge (NZD)": "3297"
+      },
+      Wellington: {
+        "Price Range": "4208",
+        "Door-to-Door Charge": "21450",
+        "Overall Charge (RMB)": "25658",
+        "Overall Charge (NZD)": "5981"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "10050",
+        "Overall Charge (RMB)": "11650",
+        "Overall Charge (NZD)": "2694"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "21450",
+        "Overall Charge (RMB)": "23050",
+        "Overall Charge (NZD)": "5373"
+      }
+    }
+  },
+
+  11: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "4628",
+        "Door-to-Door Charge": "10950",
+        "Overall Charge (RMB)": "15578",
+        "Overall Charge (NZD)": "3603"
+      },
+      Wellington: {
+        "Price Range": "4628",
+        "Door-to-Door Charge": "23500",
+        "Overall Charge (RMB)": "28128",
+        "Overall Charge (NZD)": "6557"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "10950",
+        "Overall Charge (RMB)": "12550",
+        "Overall Charge (NZD)": "2902"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "23500",
+        "Overall Charge (RMB)": "25100",
+        "Overall Charge (NZD)": "5851"
+      }
+    }
+  },
+
+  12: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "5048",
+        "Door-to-Door Charge": "11850",
+        "Overall Charge (RMB)": "16898",
+        "Overall Charge (NZD)": "3908"
+      },
+      Wellington: {
+        "Price Range": "5048",
+        "Door-to-Door Charge": "25550",
+        "Overall Charge (RMB)": "30598",
+        "Overall Charge (NZD)": "7132"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "11850",
+        "Overall Charge (RMB)": "13450",
+        "Overall Charge (NZD)": "3111"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "25550",
+        "Overall Charge (RMB)": "27150",
+        "Overall Charge (NZD)": "6329"
+      }
+    }
+  },
+
+  13: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "5467",
+        "Door-to-Door Charge": "12750",
+        "Overall Charge (RMB)": "18217",
+        "Overall Charge (NZD)": "4213"
+      },
+      Wellington: {
+        "Price Range": "5467",
+        "Door-to-Door Charge": "27600",
+        "Overall Charge (RMB)": "33067",
+        "Overall Charge (NZD)": "7708"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "12750",
+        "Overall Charge (RMB)": "14350",
+        "Overall Charge (NZD)": "3319"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "27600",
+        "Overall Charge (RMB)": "29200",
+        "Overall Charge (NZD)": "6807"
+      }
+    }
+  },
+
+  14: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "5888",
+        "Door-to-Door Charge": "13650",
+        "Overall Charge (RMB)": "19538",
+        "Overall Charge (NZD)": "4519"
+      },
+      Wellington: {
+        "Price Range": "5888",
+        "Door-to-Door Charge": "29650",
+        "Overall Charge (RMB)": "35538",
+        "Overall Charge (NZD)": "8284"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "13650",
+        "Overall Charge (RMB)": "15250",
+        "Overall Charge (NZD)": "3527"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "29650",
+        "Overall Charge (RMB)": "31250",
+        "Overall Charge (NZD)": "7284"
+      }
+    }
+  },
+
+  15: {
+    NorthChina: {
+      Auckland: {
+        "Price Range": "6307",
+        "Door-to-Door Charge": "14550",
+        "Overall Charge (RMB)": "20857",
+        "Overall Charge (NZD)": "4824"
+      },
+      Wellington: {
+        "Price Range": "6307",
+        "Door-to-Door Charge": "31700",
+        "Overall Charge (RMB)": "38007",
+        "Overall Charge (NZD)": "8859"
+      }
+    },
+    SouthChina: {
+      Auckland: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "14550",
+        "Overall Charge (RMB)": "16150",
+        "Overall Charge (NZD)": "3735"
+      },
+      Wellington: {
+        "Price Range": "1600",
+        "Door-to-Door Charge": "31700",
+        "Overall Charge (RMB)": "33300",
+        "Overall Charge (NZD)": "7762"
+      }
+    }
+  }
+  // Add prices for other volumes, departure, and destination points similarly
+};
+
+const volumeDropdown = document.getElementById("volume");
+const departureDropdown = document.getElementById("departure");
+const destinationDropdown = document.getElementById("destination");
+const resultList = document.getElementById("result-list");
+
+function updateResultsList() {
+  const volume = volumeDropdown.value;
+  const departure = departureDropdown.value;
+  const destination = destinationDropdown.value;
+
+  const priceRangeElement = document.getElementById("price-range");
+  const doorToDoorChargeElement = document.getElementById(
+    "door-to-door-charge"
+  );
+  const overallChargeRMBElement = document.getElementById("overall-charge-rmb");
+  const overallChargeNZDElement = document.getElementById("overall-charge-nzd");
+
+  if (
+    volume &&
+    departure &&
+    destination &&
+    prices[volume] &&
+    prices[volume][departure] &&
+    prices[volume][departure][destination]
+  ) {
+    const priceInfo = prices[volume][departure][destination];
+
+    // Display the results list
+    resultList.classList.remove("hidden");
+
+    // Update the elements with the corresponding data
+    priceRangeElement.textContent = priceInfo["Price Range"];
+    doorToDoorChargeElement.textContent = priceInfo["Door-to-Door Charge"];
+    overallChargeRMBElement.textContent = priceInfo["Overall Charge (RMB)"];
+    overallChargeNZDElement.textContent = priceInfo["Overall Charge (NZD)"];
+  } else {
+    // Hide the results list if any pickable option is not set
+    resultList.classList.add("hidden");
+  }
+}
+
+volumeDropdown.addEventListener("change", updateResultsList);
+departureDropdown.addEventListener("change", updateResultsList);
+destinationDropdown.addEventListener("change", updateResultsList);
